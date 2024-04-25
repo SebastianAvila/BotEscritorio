@@ -1,0 +1,25 @@
+<!-- dist\ui\index.html -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WhatsApp Bot QR Code (Se actualiza cada 30 segundos)</title>
+    <script>
+      // Función para recargar la página cada 30 segundos
+      function reloadPage() {
+        setTimeout(function() {
+          location.reload();
+        }, 30000); // 30000 milisegundos = 30 segundos
+      }
+
+      // Llamar a la función para recargar la página cuando se carga completamente
+      window.onload = function() {
+        reloadPage();
+      };
+    </script>
+  </head>
+  <body>
+    <div id="qr-container"></div>
+    <img src="../../bot-peluqueria/bot.qr.png" alt="" />
+  </body>
+</html>
