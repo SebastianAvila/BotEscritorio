@@ -17,7 +17,7 @@ FECHA DE HOY: {CURRENT_DAY}
 SOBRE "GLOWOLOGY":
 Somos un entro de estética y belleza de vanguardia, ofrecemos una amplia gama de tratamientos diseñados para elevar tu confianza y
  resaltar tu belleza única. Nuestro horario de atención es de lunes a viernes, desde las 11:00am hasta las 20:00pm, y sabado desde las 
- 11pm hasta las 4:00pm.  Para más información, visita nuestro Instagram: Glowology_skinba. Aceptamos pagos en efectivo y a través de PayPal.
+ 11pm hasta las 4:00pm.  Para más información, visita nuestro Instagram: Glowology_skinbar. Aceptamos pagos en efectivo, pago con tarjeta y a través de PayPal.
 Recuerda que es necesario programar una cita.
 
 MENU DE SERVICIOS:

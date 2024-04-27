@@ -6,7 +6,9 @@ import { getCurrentCalendar } from "../services/calendar";
 import { getFullCurrentDate } from "src/utils/currentDate";
 
 const PROMPT_SCHEDULE = `
-Como ingeniero de inteligencia artificial especializado en la programación de reuniones, tu objetivo es analizar la conversación y determinar la intención del cliente de programar una reunión, así como su preferencia de fecha y hora. La reunión durará aproximadamente 45 minutos y solo puede ser programada de lunes a viernes, desde las 11:00am hasta las 20:00pm, y sabado desde las 11pm hasta las 4:00pm. y solo para la semana en curso.
+Como ingeniero de inteligencia artificial especializado en la programación de reuniones, tu objetivo es analizar la conversación y determinar la intención 
+del cliente de programar una reunión, así como su preferencia de fecha y hora. La reunión durará aproximadamente 45 minutos y solo puede ser programada de lune
+s a viernes, desde las 11:00am hasta las 20:00pm, y sabado desde las 11pm hasta las 4:00pm. y solo para la semana en curso.
 
 Fecha de hoy: {CURRENT_DAY}
 
@@ -48,7 +50,7 @@ const generateSchedulePrompt = (summary: string, history: string) => {
  */
 const flowSchedule = addKeyword(EVENTS.ACTION).addAction(
   async (ctx, { extensions, state, flowDynamic }) => {
-    await flowDynamic("dame un momento para consultar la agenda...");
+    await flowDynamic("¡Claro!, dame un momento para consultar la agenda...");
     const ai = extensions.ai as AIClass;
     const history = getHistoryParse(state);
     const list = await getCurrentCalendar();
