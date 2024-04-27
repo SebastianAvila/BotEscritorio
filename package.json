@@ -2,10 +2,12 @@
   "name": "bot-escritorio",
   "version": "1.0.0",
   "description": "Aplicación de escritorio para mostrar el código QR del bot de WhatsApp",
-  "main": "dist/main.js", 
+  "main": "dist/main.js",
   "scripts": {
     "start": "node start.js",
-    "build": "tsc"
+    "build": "tsc",
+    "package": "electron-packager . MiApp --platform=win32 --arch=x64"
+
   },
   "keywords": [
     "electron",
@@ -17,6 +19,7 @@
   "license": "ISC",
   "devDependencies": {
     "electron": "^30.0.1",
+    "electron-packager": "^17.1.2",
     "typescript": "^5.4.5"
   }
 }
