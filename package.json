@@ -5,9 +5,8 @@
   "main": "dist/main.js",
   "scripts": {
     "start": "node start.js",
-    "build": "tsc",
-    "package": "electron-packager . MiApp --platform=win32 --arch=x64"
-
+    "com": "electron .",
+    "build": "tsc"
   },
   "keywords": [
     "electron",
@@ -15,11 +14,34 @@
     "bot",
     "desktop"
   ],
-  "author": "",
+  "win": {
+    "icon": "./dist/ui/assets/whatsapp.ico"
+  },
+  "build": {
+    "directories": {
+      "output": "build"
+    },
+    "mac": {
+      "icon": "build/logo.icns"
+    },
+    "win": {
+      "icon": "whatsapp.ico"
+    }
+  },
+  "author": "Sebastian Avila",
   "license": "ISC",
   "devDependencies": {
     "electron": "^30.0.1",
     "electron-packager": "^17.1.2",
     "typescript": "^5.4.5"
+  },
+  "dependencies": {},
+  "pkg": {
+    "scripts": "build/**/*.js",
+    "assets": "views/**/*",
+    "targets": [
+      "node14-linux-arm64"
+    ],
+    "outputPath": "dist"
   }
 }

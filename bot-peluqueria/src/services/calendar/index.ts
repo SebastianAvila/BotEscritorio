@@ -6,8 +6,8 @@ import { format, addMinutes } from "date-fns";
  */
 const getCurrentCalendar = async (): Promise<string> => {
   const dataCalendarApi = await fetch(
-    
-    "https://hook.us1.make.com/etv79ap8cjtxi5fm79dsn1977d83h0rt"
+    //"https://hook.us1.make.com/etv79ap8cjtxi5fm79dsn1977d83h0rt" //Consultar citas en sheet
+    "https://hook.us1.make.com/wikjv1274l7ijvjbyt7jx2kohxzq9rjf"
   );
   const json: any[] = await dataCalendarApi.json();
   const list = json.reduce((prev, current) => {
@@ -29,9 +29,10 @@ const appToCalendar = async (text: string) => {
   try {
     const payload = JSON.parse(text);
     console.log(payload);
-    
+
     const dataApi = await fetch(
-      "https://hook.us1.make.com/5msro2k4raa5oy85y562squosrss35kv",
+      // "https://hook.us1.make.com/5msro2k4raa5oy85y562squosrss35kv", //Crear cita
+      "https://hook.us1.make.com/gi6dq0pkbaeud2ffjfwmkiaigu23sz1p",
       {
         method: "POST",
         headers: {

@@ -1,25 +1,55 @@
-<!-- dist\ui\index.html -->
-
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WhatsApp Bot QR Code (Se actualiza cada 30 segundos)</title>
-    <script>
-      // Función para recargar la página cada 30 segundos
-      function reloadPage() {
-        setTimeout(function() {
-          location.reload();
-        }, 30000); // 30000 milisegundos = 30 segundos
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 20px;
       }
-
-      // Llamar a la función para recargar la página cuando se carga completamente
-      window.onload = function() {
-        reloadPage();
-      };
-    </script>
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #fff;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        color: #333;
+        text-align: center;
+      }
+      .brand-logo {
+        display: block;
+        margin: 20px auto;
+        width: 300px;
+        border-radius: 10pxas;
+      }
+      .qr-code {
+        display: block;
+        margin: 0 auto;
+        width: 300px;
+      }
+    </style>
   </head>
   <body>
-    <div id="qr-container"></div>
-    <img src="../../bot-peluqueria/bot.qr.png" alt="" />
+    <div class="container">
+      <img src="assets/glowology_logo.png" alt="Glowology Logo" class="brand-logo">
+      <h1>WhatsApp Bot QR Code</h1>
+      <p>¡Escanea el código QR para acceder al bot de WhatsApp de Glowology!</p>
+      <div id="qr-container">
+        <!-- El código QR se mostrará aquí -->
+        <img
+          src="../../bot-peluqueria/bot.qr.png"
+          alt="QR Code"
+          class="qr-code"
+        />
+      </div>
+      <p>Este código se actualiza automáticamente cada 30 segundos.</p>
+    </div>
   </body>
 </html>
