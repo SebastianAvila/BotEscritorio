@@ -84,6 +84,10 @@ INSTRUCCIONES:
 - Respuestas cortas ideales para enviar por whatsapp con emojis
 - Escucha activa: Presta atención a las consultas de los clientes y analiza cuidadosamente el contenido de sus mensajes.
 - Si es necesario, pide aclaraciones o detalles adicionales para comprender mejor las necesidades del cliente.
+- Espera hasta que el cliente te pida agendar una cita
+- Muy importante, NO puedes agendar citas fuera del horario laboral, ni antes del horario de apertura, ni despues del horario de cierre 
+- Asegurate que las citas no se hagan a la misma hora
+- NO agendes citas en dia Domingo
 
 
 Respuesta útil:`;
@@ -103,7 +107,6 @@ const isMenuQuestion = (message) => {
     message.toLowerCase().includes(keyword)
   );
 };
-
 
 // Actualiza la función flowSeller para manejar la detección de despedida y proporcionar una respuesta de cierre
 const flowSeller = addKeyword(EVENTS.ACTION).addAction(
@@ -167,7 +170,7 @@ const flowSeller = addKeyword(EVENTS.ACTION).addAction(
                  - Meso BTX: $6,489
                  - Meso L: $6,489`,
               delay: generateTimer(150, 250),
-            }
+            },
           ]);
         } else {
           // Si no es una pregunta sobre el menú, simplemente envía la respuesta generada por el modelo AI
@@ -178,8 +181,6 @@ const flowSeller = addKeyword(EVENTS.ACTION).addAction(
             ]);
           }
         }
-
-       
       }
     } catch (err) {
       console.log(`[ERROR]:`, err);
